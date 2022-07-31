@@ -1,31 +1,48 @@
-<title>Number Game</title>
-<style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Number Game</title>
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      form {
+        font-size: 1.5em;
+      }
+      .scrambled, input, button {
+        font-family: monospace;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Number Memory Game!</h1>
+    <p id='p1' class='color-teal' style='font-size:16px;'>
+      Example Number Here.
+    </p>
+    <form id="number-form" action="/tutorial/action.html">
+      <fieldset>
+        <legend>Type Your Answer Here</legend>
+
+        <input type="text" placeholder="Number" name="number"><br /><br />
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  <style>
   canvas {
     border:2px solid black;
     background-color: #87ceeb;
   }
 </style>
 </head>
-<body>
-  <div id="canvas"></div>
-  <body onload="startGame()">
-  <h1>Number Game</h1>
-  <script>
-    var canvasWidth = 600;
-    var canvasHeight = 400;
+  
+var numberShown       
+      
+
     
-    function startGame() {
-      gameCanvas.start();
-    }
     
-    var gameCanvas = {
-      canvas: document.createElement("canvas"),
-      start: function() {
-        this.canvas.width = canvasWidth;
-        this.canvas.height = canvasHeight;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-      }
-    }
-  </script>
-</body>
+
